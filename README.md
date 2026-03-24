@@ -1,25 +1,34 @@
-# AI-Powered Adaptive NPC Behavior System Using Python
+# Zombie Survival Game Using Python
 
 ## Description
-This is a 2D game project where the player can move around, and NPCs patrol and detect the player. The NPC behavior is controlled using a Finite State Machine (FSM), which allows them to patrol, chase, and eventually attack or flee based on conditions. The project is developed using Python and Pygame.
+A 2D Zombie Survival Game built with Python and Pygame. The player fights off waves of zombies using melee attacks, with a complete gameplay loop including health tracking and win/lose conditions.
 
-## Features Implemented
-- Player movement using WASD keys
-- NPC patrolling behavior
-- Distance-based player detection
-- Collision detection between player and NPC
-- Modular code structure with separate modules:
-  - `main.py` → Game loop and control
-  - `player.py` → Player logic
-  - `npc.py` → NPC logic (FSM ready)
-  - `settings.py` → Game settings (colors, speed, screen size)
+## Features
+- WASD movement clamped to world boundaries
+- SPACE melee attack with directional hitbox and cooldown
+- Zombies that chase and damage the player
+- Health system for player and zombies
+- Win screen (all zombies defeated) and Game Over screen
+- Custom pixel-art sprites with directional rendering
+- Camera system 
 
 ## Requirements
 - Python 3.x
 - Pygame
 
-## Setup Instructions
-1. Install Python 3.x if not already installed: https://www.python.org/downloads/
-2. Clone the repository:
-   ```bash
-   git clone <repository_link>
+## Setup
+```bash
+git clone https://github.com/Sailorship/Zombie-Survival-Game-Using-Python
+pip install -r requirements.txt
+python main.py
+```
+
+## Project Structure
+```
+main.py       # Game loop
+player.py     # Player movement, attack, health
+npc.py        # Zombie AI, health, removal
+ui.py         # HUD, Win/Game Over screens
+camera.py     # Scrolling camera
+settings.py   # Constants
+```
